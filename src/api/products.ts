@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:5038/api/products";
+const BASE_URL = import.meta.env.VITE_API_URL + "/products";
 
 export const getProducts = () => axios.get(BASE_URL);
 export const getProductById = (id: string | number) =>
