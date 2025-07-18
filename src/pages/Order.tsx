@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { createOrder } from "../api/order";
+import { getProducts } from "../api/products";
+
 
 const Order: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -17,8 +18,7 @@ const Order: React.FC = () => {
   const [loadingProducts, setLoadingProducts] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5038/api/products")
+      getProducts()
       .then((res) => {
         setProducts(res.data.map((p: any) => p.name));
         setLoadingProducts(false);
