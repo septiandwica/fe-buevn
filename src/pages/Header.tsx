@@ -143,7 +143,7 @@ const Header: React.FC = () => {
                   to="/about"
                   className="block text-amber-800 hover:text-orange-700 font-medium text-sm tracking-wide py-3 transition-colors duration-200"
                 >
-                  Product
+                  About
                 </Link>
               </li>
               <li>
