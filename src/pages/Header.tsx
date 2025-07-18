@@ -36,14 +36,14 @@ const Header: React.FC = () => {
             <div className="hidden md:flex flex-1 justify-center">
               <ul className="flex items-center space-x-10">
                 <li>
-                  <a
-                    href="#home"
+                  <Link
+                    to="/"
                     className="text-amber-800 hover:text-orange-700 font-medium text-sm tracking-wide transition-colors duration-200 relative group"
                     onClick={handleSectionNav("home")}
                   >
                     Home
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-700 transition-all duration-200 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link
@@ -122,13 +122,13 @@ const Header: React.FC = () => {
           <div className="md:hidden bg-amber-50/95 backdrop-blur-md border-t border-amber-100">
             <ul className="flex flex-col px-6 py-4 space-y-1">
               <li>
-                <a
-                  href="#home"
+                <Link
+                  to="/"
                   className="block text-amber-800 hover:text-orange-700 font-medium text-sm tracking-wide py-3 transition-colors duration-200"
                   onClick={handleSectionNav("home")}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
